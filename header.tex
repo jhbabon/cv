@@ -1,0 +1,54 @@
+\usepackage{fontspec}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  textwidth = 5.5in,
+  textheight = 8.5in,
+  marginparsep = 7pt,
+  marginparwidth = .6in
+}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping = tex-text}
+\setromanfont [Ligatures={Common}]{Palatino}
+\setmonofont{Inconsolata}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{6pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\large}
+\subsubsectionfont{\mdseries\upshape\large}
+
+% PDF SETUP
+\usepackage[
+  bookmarks,
+  colorlinks,
+  breaklinks,
+  pdftitle = {Juan Hernández Babón - C.V.},
+  pdfauthor = {Juan Hernández Babón}
+]{hyperref}
+\hypersetup{
+  linkcolor = blue,
+  citecolor = blue,
+  filecolor = black,
+  urlcolor  = blue
+}
